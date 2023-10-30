@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration debug="true">
+
+<!--	<variable name="USER_HOME" value="/home/gaoxin" />-->
+
+<!--	<shutdownHook/>-->
+
+	<!-- STDOUT appender with default encoder -->
+	<appender name="stdout-plain" class="ClpIrFileAppender">
+		<file>test-log.clp.zst</file>
+		<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS Z} [%thread] %level %class.%method\(%file:%line\): %msg %n
+		</pattern>
+	</appender>
+
+	<!-- Effective logging settings for ALL loggers -->
+	<root level="DEBUG">
+		<appender-ref ref="stdout-plain"/>
+	</root>
+
+</configuration>
