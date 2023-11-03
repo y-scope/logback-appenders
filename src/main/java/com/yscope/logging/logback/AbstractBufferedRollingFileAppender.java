@@ -289,6 +289,7 @@ public abstract class AbstractBufferedRollingFileAppender extends AppenderBase<I
 
     flushAbsoluteMaximumSoftTimeout = flushSoftTimeoutPerLevel.get(Level.TRACE);
     resetFreshnessTimeouts();
+    super.start();
 
     try {
       // Set the first rollover timestamp to the current time

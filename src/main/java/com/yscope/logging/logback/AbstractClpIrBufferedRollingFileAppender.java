@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.core.Layout;
 
 /**
  * This class extends {@link AbstractBufferedRollingFileAppender} to append to
@@ -130,6 +131,10 @@ public abstract class AbstractClpIrBufferedRollingFileAppender
 
   public int getCompressionLevel () {
     return compressionLevel;
+  }
+
+  public Layout<ILoggingEvent> getLayout() {
+    return clpIrFileAppender.getLayout();
   }
 
   @Override

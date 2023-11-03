@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yscope.logging</groupId>
-    <artifactId>logback-appender</artifactId>
-    <version>0.02-SNAPSHOT</version>
+    <artifactId>logback-appenders</artifactId>
+    <version>0.0.3</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

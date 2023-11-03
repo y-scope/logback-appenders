@@ -118,6 +118,10 @@ public class ClpIrFileAppender extends AppenderBase<ILoggingEvent> implements Fl
     return uncompressedSizeInBytes;
   }
 
+  public Layout<ILoggingEvent> getLayout() {
+    return layout;
+  }
+
   /**
    * @return The amount of data written by this appender to the current output
    * file, in bytes. This will be reset when a new output file is opened.
