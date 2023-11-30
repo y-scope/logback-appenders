@@ -35,10 +35,9 @@
     </scm>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <com.github.luben.zstd-jni.version>1.5.2-1</com.github.luben.zstd-jni.version>
     </properties>
 
     <dependencies>
@@ -57,7 +56,7 @@
         <dependency>
             <groupId>com.github.luben</groupId>
             <artifactId>zstd-jni</artifactId>
-            <version>${com.github.luben.zstd-jni.version}</version>
+            <version>1.5.2-1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -75,5 +74,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 </project>
