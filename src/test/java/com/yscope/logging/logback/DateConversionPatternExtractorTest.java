@@ -3,11 +3,9 @@ package com.yscope.logging.logback;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.yscope.logging.logback.DateConversionPattern;
-import com.yscope.logging.logback.DateConversionPatternExtractor;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DateConversionPatternExtractorTest {
   @Test

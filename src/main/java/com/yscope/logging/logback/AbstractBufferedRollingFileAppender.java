@@ -80,7 +80,8 @@ import static java.lang.Thread.sleep;
  *   is requested to when the shutdown is allowed to continue.</li>
  * </ul>
  */
-public abstract class AbstractBufferedRollingFileAppender extends AppenderBase<ILoggingEvent> implements Flushable {
+public abstract class AbstractBufferedRollingFileAppender extends AppenderBase<ILoggingEvent>
+    implements Flushable {
   // Volatile members below are marked as such because they are accessed by
   // multiple threads
 

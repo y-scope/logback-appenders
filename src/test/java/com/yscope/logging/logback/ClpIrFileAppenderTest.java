@@ -10,7 +10,6 @@ import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.spi.LoggingEvent;
 import ch.qos.logback.classic.spi.ThrowableProxy;
 import ch.qos.logback.core.Context;
-import com.yscope.logging.logback.ClpIrFileAppender;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +22,7 @@ public class ClpIrFileAppenderTest {
   private final String patternLayoutString =
       "%d{yyyy-MM-dd HH:mm:ss.SSS Z} [%thread] %level %class.%method(%file:%line): %msg %n";
   private final int compressionLevel = 3;
-  private Context context = new ch.qos.logback.classic.LoggerContext();
+  private final Context context = new ch.qos.logback.classic.LoggerContext();
 
   @Test
   public void testFourByteIrAppender() {

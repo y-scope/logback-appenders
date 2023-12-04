@@ -3,8 +3,6 @@ package com.yscope.logging.logback;
 import java.util.Map;
 
 import ch.qos.logback.classic.LoggerContext;
-import com.yscope.logging.logback.AbstractClpIrBufferedRollingFileAppender;
-import com.yscope.logging.logback.ManualTimeSource;
 
 /**
  * A rolling file appender used for testing

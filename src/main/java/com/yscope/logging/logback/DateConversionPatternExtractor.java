@@ -57,8 +57,7 @@ class DateConversionPatternExtractor {
     // | DATE_SPECIFIER_OPEN_QUOTE  | [^']                  | -                                   | -                          |
     // | DATE_SPECIFIER_OPEN_QUOTE  | '                     | -                                   | DATE_SPECIFIER_OPEN_BRACE  |
 
-    boolean patternIsEnhanced = false;
-    if (conversionPattern == null || conversionPattern.length() == 0) {
+    if (conversionPattern == null || conversionPattern.isEmpty()) {
       throw new IllegalArgumentException("Pattern " + conversionPattern
           + " is not valid.");
     }
