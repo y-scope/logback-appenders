@@ -72,12 +72,9 @@ public class ClpIrFileAppenderTest {
 
     // Test writing
     try {
-      testWriting(fileName, false, false, compressionLevel);
-      testWriting(fileName, false, true, compressionLevel);
-      testWriting(fileName, false, false, compressionLevel + 1);
-      testWriting(fileName, true, false, compressionLevel);
-      testWriting(fileName, true, true, compressionLevel);
-      testWriting(fileName, true, false, compressionLevel + 1);
+      testWriting(fileName, useFourByteEncoding, false, compressionLevel);
+      testWriting(fileName, useFourByteEncoding, true, compressionLevel);
+      testWriting(fileName, useFourByteEncoding, false, compressionLevel + 1);
     } catch (Exception ex) {
       fail(ex);
     }
