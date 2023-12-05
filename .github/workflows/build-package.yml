@@ -31,7 +31,7 @@ jobs:
       - name: "Build package and run tests"
         run: "mvn --batch-mode test"
 
-      - if: "github.event_name != 'pull_request'"
+      - if: "${{github.event_name != 'pull_request' && github.ref == 'refs/heads/main'}}"
         name: "Deploy to GitHub"
         env:
           GITHUB_TOKEN: "${{secrets.GITHUB_TOKEN}}"
