@@ -1,0 +1,39 @@
+name: "build-package"
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - ".github/workflows/build-package.yml"
+      - "pom.xml"
+      - "src/**"
+  workflow_dispatch:
+
+concurrency:
+  group: "${{github.workflow}}-${{github.ref}}"
+  cancel-in-progress: true
+
+jobs:
+  build-package:
+    runs-on: "ubuntu-latest"
+    permissions:
+      packages: "write"
+    steps:
+      - uses: "actions/checkout@v3"
+        with:
+          submodules: "recursive"
+
+      - uses: "actions/setup-java@v4"
+        with:
+          java-version: "11"
+          distribution: "adopt"
+          server-id: "github"
+
+      - name: "Build package and run tests"
+        run: "mvn --batch-mode test"
+
+      - if: "github.event_name != 'pull_request'"
+        name: "Deploy to GitHub"
+        env:
+          GITHUB_TOKEN: "${{secrets.GITHUB_TOKEN}}"
+        run: "mvn --batch-mode deploy -DskipTests -Pgithub_release"

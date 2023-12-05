@@ -1,7 +1,6 @@
 name: "build-and-release-package"
 
-on:
-  workflow_dispatch:
+on: "workflow_dispatch"
 
 concurrency: "${{github.workflow}}-${{github.ref}}"
 
